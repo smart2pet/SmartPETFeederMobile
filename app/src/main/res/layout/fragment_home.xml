@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="125dp"
+        android:layout_y="31dp"
+        android:text="SmartPET Feeder"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/deletePlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="182dp"
+        android:layout_y="404dp"
+        android:onClick="delPlan"
+        android:text="Delete the feeding plan" />
+
+    <EditText
+        android:id="@+id/inputFeedWeight"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_x="179dp"
+        android:layout_y="315dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="245dp"
+        android:layout_y="328dp"
+        android:text="grams" />
+
+    <Button
+        android:id="@+id/addPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="19dp"
+        android:layout_y="405dp"
+        android:onClick="addPlan"
+        android:text="Add a feeding plan" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="23dp"
+        android:layout_y="479dp"
+        android:text="Feeding time:" />
+
+    <EditText
+        android:id="@+id/setTime"
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_x="110dp"
+        android:layout_y="462dp"
+        android:ems="10"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="25dp"
+        android:layout_y="520dp"
+        android:text="Food weight" />
+
+    <EditText
+        android:id="@+id/planWeight"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_x="104dp"
+        android:layout_y="509dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="178dp"
+        android:layout_y="522dp"
+        android:text="grams" />
+
+    <Button
+        android:id="@+id/feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="94dp"
+        android:layout_y="312dp"
+        android:onClick="feed"
+        android:text="Feed" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="145dp"
+        android:layout_y="94dp"
+        android:text="Total feeded today:" />
+
+    <TextView
+        android:id="@+id/todayTotalFeed"
+        android:layout_width="231dp"
+        android:layout_height="97dp"
+        android:layout_x="81dp"
+        android:layout_y="163dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textDirection="inherit"
+        android:textSize="34sp" />
+
+</AbsoluteLayout>
