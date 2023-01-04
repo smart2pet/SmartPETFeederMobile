@@ -160,4 +160,36 @@ public class Feeder {
             throw new Failed("");
         }
     }
+    public int getFeededToday() {
+        try {
+            StringBuffer sbf = new StringBuffer();
+            String strRead = null;
+            HttpURLConnection conn = null;
+            URL url = new URL(uri + "/api/food");
+            conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json");
+
+            conn.connect();
+            OutputStreamWriter writer = new OutputStreamWriter(conn.getOutputStream(), StandardCharsets.UTF_8);
+            writer.write("{\"range\": \"today\"}");
+            writer.flush();
+            InputStream is = conn.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+            while ((strRead = reader.readLine()) != null) {
+                sbf.append(strRead);
+            }
+            reader.close();
+            conn.disconnect();
+            String results = sbf.toString();
+            Log.println(Log.WARN, "FEed", results);
+            Log.println(Log.WARN, "Feeder", "Feeding request sent.");
+            int result;
+            result = Integer.parseInt(results.split(":")[1].replace('}', '\0'));
+            return result;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
 }

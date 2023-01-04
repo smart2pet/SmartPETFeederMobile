@@ -120,4 +120,13 @@
         android:textDirection="inherit"
         android:textSize="34sp" />
 
+    <Button
+        android:id="@+id/flushTotalBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="261dp"
+        android:onClick="flushTotal"
+        android:text="flush" />
+
 </AbsoluteLayout>

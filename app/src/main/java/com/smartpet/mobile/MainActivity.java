@@ -149,4 +149,9 @@ public class MainActivity extends AppCompatActivity {
             normalDialog.show();
         }
     }
+    public void flushTotal(View view) {
+        int total = feeder.getFeededToday();
+        TextView totalFeeded = (TextView) findViewById(R.id.todayTotalFeed);
+        totalFeeded.setText(String.valueOf(total));
+    }
 }
