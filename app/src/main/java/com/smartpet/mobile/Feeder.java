@@ -165,9 +165,10 @@ public class Feeder {
             StringBuffer sbf = new StringBuffer();
             String strRead = null;
             HttpURLConnection conn = null;
+            System.out.println(uri + "/api/food");
             URL url = new URL(uri + "/api/food");
             conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
+            conn.setRequestMethod("PUT");
             conn.setRequestProperty("Content-Type", "application/json");
 
             conn.connect();
