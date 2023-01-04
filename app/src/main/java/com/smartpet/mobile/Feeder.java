@@ -186,7 +186,7 @@ public class Feeder {
             Log.println(Log.WARN, "FEed", results);
             Log.println(Log.WARN, "Feeder", "Feeding request sent.");
             int result;
-            result = Integer.parseInt(results.split(":")[1].replace('}', '\0'));
+            result = Integer.parseInt((results.split(",")[1]).split(":")[1].replaceAll("\\}", ""));
             return result;
         } catch (IOException e) {
             e.printStackTrace();
