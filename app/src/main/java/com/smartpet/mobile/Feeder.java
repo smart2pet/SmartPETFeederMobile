@@ -167,7 +167,7 @@ public class Feeder {
             HttpURLConnection conn = null;
             URL url = new URL(uri + "/api/food");
             conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("POST");
+            conn.setRequestMethod("GET");
             conn.setRequestProperty("Content-Type", "application/json");
 
             conn.connect();
